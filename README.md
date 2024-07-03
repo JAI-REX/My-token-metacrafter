@@ -13,13 +13,18 @@ To run this program, you can use Remix, an online Solidity IDE. To get started, 
 Once you are on the Remix website, create a new file by clicking on the "+" icon in the left-hand sidebar. Save the file with a .sol extension (e.g., MyToken.sol). Copy and paste the following code into the file: // code:
 
 // SPDX-License-Identifier: MIT
+
 pragma solidity ^0.8.18;
 
-contract MyToken {
-    string public Mytoken_Name = "TREX";
-    string public Mytoken_abbrv = "REX";
-    uint public total_Supply = 0;
 
+contract MyToken {
+
+    string public Mytoken_Name = "TREX";
+   
+    string public Mytoken_abbrv = "REX";
+     
+    uint public total_Supply = 0;
+    
     mapping(address => uint)public balance;
 
     function mint(address Add , uint Val) public{
@@ -32,7 +37,8 @@ contract MyToken {
         total_Supply -= Val;
         balance[Add] -= Val;
     }
-}}
+}
+
 Compiling the Code
 
 To compile the code, click on the "Solidity Compiler" tab in the left-hand sidebar and then click on the "Compile MyToken.sol" button.
